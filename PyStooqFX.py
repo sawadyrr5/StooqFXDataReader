@@ -29,6 +29,9 @@ class PyStooqFX:
         except pd.parser.CParserError:
             df = pd.DataFrame()
 
+        # シンボルを追加
+        df.insert(0, 'Symbol', self.symbol)
+
         return df
 
 if __name__ == '__main__':
